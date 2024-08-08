@@ -1,8 +1,7 @@
-<p>counter-container works!</p>
-<button (click)="increment()">Increment</button>
+<app-button (click)="increment()">Increment</app-button>
 
-<div>Current Count: {{ count$ | async }}</div>
+<app-number-display  [display]="count$ | async"></app-number-display>
 
-<button (click)="decrement()">Decrement</button>
+<app-button (click)="decrement()">Decrement</app-button>
 
-<button (click)="reset()">Reset Counter</button>
+<app-button (click)="reset()">Reset Counter</app-button>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,4 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './number-display.component.html',
   styleUrl: './number-display.component.css',
 })
-export class NumberDisplayComponent {}
+export class NumberDisplayComponent {
+  @Input('display') displayValue: number | null = 0;
+}
