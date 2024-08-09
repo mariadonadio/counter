@@ -1,0 +1,10 @@
+.counter-section{
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-container{
+    flex-direction: column;
+}

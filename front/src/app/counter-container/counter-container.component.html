@@ -1,7 +1,13 @@
-<app-button (click)="increment()">Increment</app-button>
+<section class="counter-section">
+    <div class="counter-container">
+        <div class="counter-row">
+            <app-button (click)="increment()">Increment</app-button>
+            <app-number-display  [display]="count$ | async"></app-number-display>
+            <app-button (click)="decrement()">Decrement</app-button>    
+        </div>
+        <div class="counter-row">
+            <app-button (click)="reset()">Reset Counter</app-button>
+        </div>
+    </div>
+</section>
 
-<app-number-display  [display]="count$ | async"></app-number-display>
-
-<app-button (click)="decrement()">Decrement</app-button>
-
-<app-button (click)="reset()">Reset Counter</app-button>
