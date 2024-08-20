@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start-front": "nx serve front"
+    "start-front": "nx serve front",
+    "start-back": "nx serve back"
   },
   "private": true,
   "devDependencies": {
@@ -72,6 +73,7 @@
     "@ngrx/store": "^18.0.0",
     "axios": "^1.6.0",
     "express": "^4.18.1",
+    "mysql": "^2.18.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

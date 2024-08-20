@@ -1,10 +1,7 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
 import express from 'express';
 import * as path from 'path';
+import environment from './environment/environment';
+const counter = require('./counter/counter.router');
 
 const app = express();
 
@@ -14,8 +11,10 @@ app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to back!' });
 });
 
-const port = process.env.PORT || 3333;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
+app.use('/counter', counter);
+
+const server = app.listen(environment.PORT, () => {
+  console.log(`Listening at http://localhost:${environment.PORT}/api`);
 });
+
 server.on('error', console.error);
